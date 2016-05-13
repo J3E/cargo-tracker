@@ -45,7 +45,7 @@ public class ExternalRoutingService implements RoutingService {
     @Inject
     private VoyageRepository voyageRepository;
     // TODO Use injection instead?
-    private static final Logger log = Logger.getLogger(
+    private static final Logger LOG = Logger.getLogger(
             ExternalRoutingService.class.getName());
 
     @PostConstruct
@@ -79,7 +79,7 @@ public class ExternalRoutingService implements RoutingService {
             if (routeSpecification.isSatisfiedBy(itinerary)) {
                 itineraries.add(itinerary);
             } else {
-                log.log(Level.FINE,
+                LOG.log(Level.FINE,
                         "Received itinerary that did not satisfy the route specification");
             }
         }
