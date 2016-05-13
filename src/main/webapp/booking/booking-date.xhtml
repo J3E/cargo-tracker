@@ -25,7 +25,7 @@
 
                         <br/>
                         <h:form id="dateForm">
-                            <p:outputLabel value="3. Set the arrival deadline for this new #{bookingBackingBean.originName}-#{bookingBackingBean.destinationName} cargo " />
+                            <p:outputLabel value="3. Set the arrival deadline for this new #{bookingBackingBean.origin.name}-#{bookingBackingBean.destination.name} cargo " />
                             <hr/>
 
                             <h:panelGrid columns="2" styleClass="registrationPanelGrid" style="margin: 0 auto;">
@@ -40,7 +40,7 @@
                                 <p:outputLabel value="Journey duration is #{bookingBackingBean.duration} days." rendered="#{bookingBackingBean.duration gt 1}"/>
                             </h:panelGrid>
 
-                            <hr/>   
+                            <hr/>
 
                             <h:panelGrid columns="5" styleClass="registrationPanelGrid" style="margin: 0 auto;">
                                 <p:commandButton value="Back" action="booking-destination" />

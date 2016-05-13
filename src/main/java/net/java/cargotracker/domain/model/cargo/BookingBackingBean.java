@@ -11,8 +11,8 @@ import javax.faces.flow.FlowScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import static net.java.cargotracker.application.util.DateUtil.computeDuration;
-import net.java.cargotracker.interfaces.booking.facade.dto.Location;
 import net.java.cargotracker.interfaces.booking.facade.BookingServiceFacade;
+import net.java.cargotracker.interfaces.booking.facade.dto.Location;
 import org.primefaces.context.RequestContext;
 
 /**
@@ -21,16 +21,16 @@ import org.primefaces.context.RequestContext;
  */
 @Named
 @FlowScoped("booking")
-public class BookingBackingBean implements Serializable{
+public class BookingBackingBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private static final String FORMAT = "yyyy-MM-dd";
     List<Location> locations;
     private Date arrivalDeadline;
-    private String originUnlocode;
-    private String originName;
-    private String destinationName;
-    private String destinationUnlocode;
+
+    private Location origin;
+    private Location destination;
+
     private String newTrackingId = null;
     private Date today = new Date();
     private boolean bookable = false;
@@ -45,65 +45,40 @@ public class BookingBackingBean implements Serializable{
         locations = bookingServiceFacade.listShippingLocations();
     }
 
-    @SuppressWarnings("SuspiciousIndentAfterControlStatement")
     public List<Location> getLocations() {
+        return locations;
+    }
 
-        List<Location> filteredLocations = new ArrayList<>();
-        String locationToRemove = null;
+    public List<Location> getDestinations() {
+        List<Location> availableDestinations = new ArrayList<>(locations);
+        availableDestinations.remove(origin);
+        return availableDestinations;
+    }
 
-        // TODO: there should be a better way to do tihs
-        if (FacesContext.getCurrentInstance().getViewRoot().getViewId().endsWith("destination.xhtml")) {
-            // in Destination menu, Orign can't be selected
-            locationToRemove = originUnlocode;
-        } else // and vice-versa
-        if (destinationUnlocode != null) {
-            locationToRemove = destinationUnlocode;
-        }
+    public List<Location> getOrigins() {
+        List<Location> availableOrigins = new ArrayList<>(locations);
+        availableOrigins.remove(destination);
+        return availableOrigins;
+    }
 
-        for (Location loc : locations) {
-            if (!loc.getUnLocode().equalsIgnoreCase(locationToRemove)) {
-                filteredLocations.add(loc);
-            }
-        }
-        return filteredLocations;
+    public Location getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(Location origin) {
+        this.origin = origin;
+    }
+
+    public Location getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Location destination) {
+        this.destination = destination;
     }
 
     public Date getArrivalDeadline() {
         return arrivalDeadline;
-    }
-
-    public String getOriginUnlocode() {
-        return originUnlocode;
-    }
-
-    public String getOriginName() {
-        return originName;
-    }
-
-    public String getDestinationName() {
-        return destinationName;
-    }
-
-    public void setOriginUnlocode(String originUnlocode) {
-        this.originUnlocode = originUnlocode;
-        for (Location loc : locations) {
-            if (loc.getUnLocode().equalsIgnoreCase(originUnlocode)) {
-                this.originName = loc.getNameOnly();
-            }
-        }
-    }
-
-    public String getDestinationUnlocode() {
-        return destinationUnlocode;
-    }
-
-    public void setDestinationUnlocode(String destinationUnlocode) {
-        this.destinationUnlocode = destinationUnlocode;
-        for (Location loc : locations) {
-            if (loc.getUnLocode().equalsIgnoreCase(destinationUnlocode)) {
-                destinationName = loc.getNameOnly();
-            }
-        }
     }
 
     public Date getToday() {
@@ -130,16 +105,15 @@ public class BookingBackingBean implements Serializable{
 
         String trackingId = null;
         try {
-            if (!originUnlocode.equals(destinationUnlocode)) {
+            if (!origin.equals(destination)) {
                 trackingId = bookingServiceFacade.bookNewCargo(
-                        originUnlocode,
-                        destinationUnlocode,
+                        origin.getUnLocode(),
+                        destination.getUnLocode(),
                         //new SimpleDateFormat(FORMAT).parse(arrivalDeadline));
                         //new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(arrivalDeadline)); // davidd
                         arrivalDeadline);
 
             } else {
-                // TODO See if this can be injected.
                 FacesContext context = FacesContext.getCurrentInstance();
                 // UI now prevents from selecting same origin/destination
                 FacesMessage message = new FacesMessage("Origin and destination cannot be the same.");
