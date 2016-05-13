@@ -1,9 +1,9 @@
-================================================================================
-                              Cargo Tracker
-            Applied Domain-Driven Design Blue Prints for Java EE
-================================================================================
 
-![CI-State](https://travis-ci.org/J3E/cargo-tracker.svg?branch=master)
+Cargo Tracker - Java EE Demo Application ![CI-State](https://travis-ci.org/J3E/cargo-tracker.svg?branch=master)
+==========================================
+Aim is to expand Cargo Tracker into a full stack Java EE sample application.
+
+Forked from http://cargotracker.java.net
 
 Overview
 ========
@@ -15,7 +15,7 @@ developed by DDD pioneer Eric Evans' company Domain Language and the Swedish
 software consulting company Citerus. The cargo example actually comes from
 Eric Evans' seminal book on DDD. The original application is written in Spring,
 Hibernate and Jetty whereas the application is build entirely on Java EE 7 and
-GlassFish 4.  It also supports WildFly 8.
+GlassFish 4. It also supports WildFly 8.
 
 The application is an end-to-end system for keeping track of shipping cargo. It
 has several interfaces described in the following sections.
@@ -170,12 +170,7 @@ you might run into the following issues:
 
 Getting Involved
 ================
-Cargo Tracker is an open source project hosted on java.net. We would welcome any
+Cargo Tracker is an open source project hosted on GitHub. We would welcome any
 and all contributions.
 
-The project mailing lists are here: https://java.net/projects/cargotracker/lists
-The JIRA issue tracker is here: http://java.net/jira/browse/CARGOTRACKER
-
-You can also send an email to reza.rahman@oracle.com with any questions,
-concerns or suggestions.
-
+The issue tracker is here: https://github.com/J3E/cargo-tracker/issues
