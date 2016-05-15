@@ -48,16 +48,16 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#overview">Overview</a>
+                            <a target="_blank" href="#overview">Overview</a>
                         </li>
                         <li>
-                            <a href="#getstarted">Getting Started</a>
+                            <a target="_blank" href="#getstarted">Getting Started</a>
                         </li>
                         <li>
-                            <a href="#eeddd">Java EE</a>
+                            <a target="_blank" href="#eeddd">Java EE</a>
                         </li>
                         <li>
-                            <a href="#ressources">Ressources</a>
+                            <a target="_blank" href="#ressources">Ressources</a>
                         </li>
 
                     </ul>
@@ -110,11 +110,11 @@
                     <div class="col-lg-9 col-lg-offset-1 col-sm-6">
                         <p class="lead">This project demonstrates how you can develop applications with the Java EE platform using widely adopted architectural best practices like Domain-Driven Design (DDD). The code is intended to mirror a non-trivial application that developers in the real work would work on. It attempts to demonstrate first-hand how you can use Java EE to effectively meet practical enterprise concerns such as productivity, agility, testability, flexibility, maintainability, scalability and security.<br><br>
 
-                            The project is directly based on the well known original <a href="http://dddsample.sourceforge.net/">Java DDD sample</a> application developed by DDD pioneer Eric Evans' company <a href="http://domainlanguage.com/">Domain Language</a> and the Swedish software consulting company <a href="http://www.citerus.se/">Citerus</a>. The cargo example actually comes from Eric Evans' <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">seminal book</a>. That project uses older versions of Spring, Hibernate and Jetty whereas we focus on vanilla Java EE.<br><br>
+                            The project is directly based on the well known original <a target="_blank" href="http://dddsample.sourceforge.net/">Java DDD sample</a> application developed by DDD pioneer Eric Evans' company <a target="_blank" href="http://domainlanguage.com/">Domain Language</a> and the Swedish software consulting company <a target="_blank" href="http://www.citerus.se/">Citerus</a>. The cargo example actually comes from Eric Evans' <a target="_blank" href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">seminal book</a>. That project uses older versions of Spring, Hibernate and Jetty whereas we focus on vanilla Java EE.<br><br>
 
                             In the same vein as that project, we certainly are not in the business of prescribing how you should write Java EE applications. The code simply demonstrates ideas that you could adopt if you think they are right for you. We've also tried to show you just some of the many different approaches that you could take to interpret and implement DDD concepts. You are of course warmly welcomed to provide feedback and contribute to this Open Source project.<br><br>
 
-                            As such, we will continue to rely heavily on the original DDD sample application as well as the existing knowledge base in the DDD community as invaluable resources on further details on DDD as it applies to this code base (please see the <a href=" http://dddsample.sourceforge.net">DDD Sample pages</a> for vital details). We also highly recommend you read the <a href="#eeddd">Java EE and DDD</a> section. It is perhaps best to skim it, explore the application/code and revisit the section.<br><br>
+                            As such, we will continue to rely heavily on the original DDD sample application as well as the existing knowledge base in the DDD community as invaluable resources on further details on DDD as it applies to this code base (please see the <a target="_blank" href=" http://dddsample.sourceforge.net">DDD Sample pages</a> for vital details). We also highly recommend you read the <a target="_blank" href="#eeddd">Java EE and DDD</a> section. It is perhaps best to skim it, explore the application/code and revisit the section.<br><br>
 
                             This effort is very grateful for the kind blessings and guidance of the good folks behind the original DDD sample application.</p>
                     </div>
@@ -194,15 +194,15 @@
                         <hr class="section-heading-spacer">
                     </div>
                     <div class="col-lg-9 col-lg-offset-1 col-sm-6">
-                        <p class="lead">If you simply wish to explore the code, download it as a zip from the <a href="https://github.com/J3E/cargo-tracker/archive/master.zip">download</a> page or browse the <a href="https://github.com/J3E/cargo-tracker/tree/master">repository</A>.<br>
+                        <p class="lead">If you simply wish to explore the code, download it as a zip from the <a target="_blank" href="https://github.com/J3E/cargo-tracker/archive/master.zip">download</a> page or browse the <a target="_blank" href="https://github.com/J3E/cargo-tracker/tree/master">repository</A>.<br>
                             The source is a Maven project, so you should be able to easily build it or set it up in your favorite IDE. We have instructions for NetBeans. We welcome a contribution showing how to use the project with Eclipse and other IDEs.<br><br>
                             You can also run the application directly from the Maven command line using Apache Cargo. All you need to is navigate to the project source root and type:
 
                             <code>mvn package cargo:run</code><br>
-                            Once the application starts up, just open up a browser and navigate to <a href="http://localhost:8080/cargo-tracker/">http://localhost:8080/cargo-tracker/</a>.<br><br>
+                            Once the application starts up, just open up a browser and navigate to <a target="_blank" href="http://localhost:8080/cargo-tracker/">http://localhost:8080/cargo-tracker/</a>.<br><br>
 
                             The project currently runs on Java EE 7/GlassFish 4 and Java SE 7. We welcome contributions for running the application on other Java EE application servers (as you will see in the source code, there are few dependencies on GlassFish so this should be pretty easy to do).<br><br>
-                            Our roadmap (see <a href="https://github.com/J3E/cargo-tracker/issues">issue tracker</A>) includes plans to create a Java EE 8 version of the application.<br>
+                            Our roadmap (see <a target="_blank" href="https://github.com/J3E/cargo-tracker/issues">issue tracker</A>) includes plans to create a Java EE 8 version of the application.<br>
 
                         </p>
                     </div>
@@ -255,13 +255,13 @@
                     <div class="col-lg-9 col-lg-offset-1 col-sm-6">
                         <p class="lead">As the name implies, Domain-Driven Design is an approach to software design and development that focuses on the core domain and domain logic. The domain is implemented through a careful focus on traditional OOAD (Object Oriented Analysis and Design) and modeling the real world problem the software is trying to solve as closely as possible.</p>
 
-                        <p class="lead"><a href="http://en.wikipedia.org/wiki/Domain-driven_design">Wikipedia</a> does a surprisingly good job at overviewing DDD. Aslam Khan's <a href="http://refcardz.dzone.com/refcardz/getting-started-domain-driven">DDD Ref Card</a> on DZone is a brief read and does a great job of explaining the core concepts of DDD. For a bit more detail, you could read the <a href="http://www.infoq.com/minibooks/domain-driven-design-quickly">free DDD eBook</a> on InfoQ. Finally, you can of course read <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Eric Evans' book</a> itself. However, we recommend not starting with the book until you get a bit of your bearings around this application first.</p>
+                        <p class="lead"><a target="_blank" href="http://en.wikipedia.org/wiki/Domain-driven_design">Wikipedia</a> does a surprisingly good job at overviewing DDD. Aslam Khan's <a target="_blank" href="http://refcardz.dzone.com/refcardz/getting-started-domain-driven">DDD Ref Card</a> on DZone is a brief read and does a great job of explaining the core concepts of DDD. For a bit more detail, you could read the <a target="_blank" href="http://www.infoq.com/minibooks/domain-driven-design-quickly">free DDD eBook</a> on InfoQ. Finally, you can of course read <a target="_blank" href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Eric Evans' book</a> itself. However, we recommend not starting with the book until you get a bit of your bearings around this application first.</p>
 
-                        <p class="lead">The basic building blocks of the domain are entities, value objects, aggregates, services, repositories and factories. The <a href="https://sknitelius.gitbooks.io/cargo-tracker/content/characterization/characterization.html">Characterization</a> page overviews how these concepts are implemented in the application using Java EE. Logical layers partitioning distinct concerns are super-imposed on the core concept of the domain. These layers generally consist of the UI/interface layer, the application layer, the domain layer (of course!) and the infrastructure layer respectively. The <a href="https://sknitelius.gitbooks.io/cargo-tracker/content/architecture/layers.html">Layers</a> page explains the architectural layers in the application and how they relate to various Java EE APIs. The DDD community also fully embraces practices like Test Driven Development, Agile, Emergent Design, Refactoring and Continuous Integration. We've incorporated all these practices into the application in a pragmatic fashion.</p>
+                        <p class="lead">The basic building blocks of the domain are entities, value objects, aggregates, services, repositories and factories. The <a target="_blank" href="https://sknitelius.gitbooks.io/cargo-tracker/content/characterization/characterization.html">Characterization</a> page overviews how these concepts are implemented in the application using Java EE. Logical layers partitioning distinct concerns are super-imposed on the core concept of the domain. These layers generally consist of the UI/interface layer, the application layer, the domain layer (of course!) and the infrastructure layer respectively. The <a target="_blank" href="https://sknitelius.gitbooks.io/cargo-tracker/content/architecture/layers.html">Layers</a> page explains the architectural layers in the application and how they relate to various Java EE APIs. The DDD community also fully embraces practices like Test Driven Development, Agile, Emergent Design, Refactoring and Continuous Integration. We've incorporated all these practices into the application in a pragmatic fashion.</p>
 
-                        <center><img src="img/ddd-diagram.png"><br>(Diagram credited to <a href="http://www.infoq.com/minibooks/domain-driven-design-quickly">Domain-Driven Design Quickly</a>)</center><br>
+                        <center><img src="img/ddd-diagram.png"><br>(Diagram credited to <a target="_blank" href="http://www.infoq.com/minibooks/domain-driven-design-quickly">Domain-Driven Design Quickly</a>)</center><br>
 
-                        <p class="lead">One of the primary principles of DDD is that design should be focused on the business domain, not technology. The role of technology is to empower software developers to implement readable, productive, maintainable systems that mirror the real world, not place constraints on design choices. Most mainstream technology stacks today have matured enough to make this principle a reality, Java EE is no exception. In fact, with a single-minded focus on simplicity, POJOs, Java/OO centric strong typing, annotations and intelligent defaults that minimize system configuration and lets developers focus on solving the business problem, we think Java EE is one of the best platforms to support DDD. Java EE makes it possible to quickly and effectively produce a working system by annotating domain and application classes and implementing interface and infrastructure code. In the <a href="https://sknitelius.gitbooks.io/cargo-tracker/content/characterization/characterization.html">Characterization</a> and <a href="https://sknitelius.gitbooks.io/cargo-tracker/content/architecture/layers.html">Layers</a> pages we've overviewed how some key Java EE APIs map to DDD concepts and pointed you to some of the most important bits of implementation code in the application. In the figure below, we've summarized how this mapping looks like visually as a handy cross reference.</p>
+                        <p class="lead">One of the primary principles of DDD is that design should be focused on the business domain, not technology. The role of technology is to empower software developers to implement readable, productive, maintainable systems that mirror the real world, not place constraints on design choices. Most mainstream technology stacks today have matured enough to make this principle a reality, Java EE is no exception. In fact, with a single-minded focus on simplicity, POJOs, Java/OO centric strong typing, annotations and intelligent defaults that minimize system configuration and lets developers focus on solving the business problem, we think Java EE is one of the best platforms to support DDD. Java EE makes it possible to quickly and effectively produce a working system by annotating domain and application classes and implementing interface and infrastructure code. In the <a target="_blank" href="https://sknitelius.gitbooks.io/cargo-tracker/content/characterization/characterization.html">Characterization</a> and <a target="_blank" href="https://sknitelius.gitbooks.io/cargo-tracker/content/architecture/layers.html">Layers</a> pages we've overviewed how some key Java EE APIs map to DDD concepts and pointed you to some of the most important bits of implementation code in the application. In the figure below, we've summarized how this mapping looks like visually as a handy cross reference.</p>
 
                         <center><img src="img/ddd_javaee.png"></center>
 
@@ -289,7 +289,7 @@
                     </div>
                     <div class="col-lg-9 col-lg-offset-1 col-sm-6">
                         
-                        <p class="lead">This is by no means a comprehensive list of the features used. Please see our <a href="https://github.com/J3E/cargo-tracker/issues">roadmap</a> for APIs and features we plan to include in the future.</p>
+                        <p class="lead">This is by no means a comprehensive list of the features used. Please see our <a target="_blank" href="https://github.com/J3E/cargo-tracker/issues">roadmap</a> for APIs and features we plan to include in the future.</p>
                                <table class="table" style="font-weight:200;">
 <tr><td>JSF</td><td>Facelets, templates, view parameters, view actions, message bundles, CDI compatible view scope, HTML 5 pass-though attributes, HTML 5 pass-though elements</td></tr>
 <tr><td>CDI</td><td>Basic injection, scopes, named beans, qualifiers, events, observers, default enablement</td></tr>
@@ -328,15 +328,15 @@
                         <hr class="section-heading-spacer">
                     </div>
                     <div class="col-lg-9 col-lg-offset-1 col-sm-6">
-	                                            <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="https://github.com/J3E/cargo-tracker">Source Code Repository (GitHub)</a></p>
-                                                <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="https://github.com/J3E/cargo-tracker/issues">Issues Tracking (GitHub)</a></p>
-                                                <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="https://groups.google.com/forum/#!forum/j3e-cargo-tracker">Mailing Lists</a></p>		
-												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="http://docs.oracle.com/javaee/7/tutorial/doc/home.html">Oracle Java EE Tutorial</a>
-												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="http://www.programming-simplified.com/index.html">Good Video Tutorial on Java EE</a>
+	                                            <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="https://github.com/J3E/cargo-tracker">Source Code Repository (GitHub)</a></p>
+                                                <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="https://github.com/J3E/cargo-tracker/issues">Issues Tracking (GitHub)</a></p>
+                                                <p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="https://groups.google.com/forum/#!forum/j3e-cargo-tracker">Mailing Lists</a></p>		
+												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="http://docs.oracle.com/javaee/7/tutorial/doc/home.html">Oracle Java EE Tutorial</a>
+												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="http://www.programming-simplified.com/index.html">Good Video Tutorial on Java EE</a>
 												
-												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="http://en.wikipedia.org/wiki/Domain-driven_design">Domain-Driven Design on Wikipedia</a>
-												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="http://refcardz.dzone.com/refcardz/getting-started-domain-driven">Getting Started with Domain-Driven Design</a>
-												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a href="http://www.infoq.com/minibooks/domain-driven-design-quickly">Domain Driven Design Quickly</a>
+												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="http://en.wikipedia.org/wiki/Domain-driven_design">Domain-Driven Design on Wikipedia</a>
+												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="http://refcardz.dzone.com/refcardz/getting-started-domain-driven">Getting Started with Domain-Driven Design</a>
+												<p class="lead"><i class="fa fa-chevron-right greyish">&#160;</i><a target="_blank" href="http://www.infoq.com/minibooks/domain-driven-design-quickly">Domain Driven Design Quickly</a>
                     </div>
                 </div>
 
@@ -353,7 +353,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-11">
-                        <h2 class="shadowme">Make sure to follow <a href="https://twitter.com/J3E_Project">@J3E_Project</a> and <a href="https://twitter.com/java_ee">@Java_EE</a> on <i class="fa fa-twitter"></i></h2>
+                        <h2 class="shadowme">Make sure to follow <a target="_blank" href="https://twitter.com/J3E_Project">@J3E_Project</a> and <a target="_blank" href="https://twitter.com/java_ee">@Java_EE</a> on <i class="fa fa-twitter"></i></h2>
                     </div>
                 </div>
             </div>
@@ -369,19 +369,19 @@
                     <div class="col-lg-12">
                         <!--ul class="list-inline">
                             <li>
-                                <a href="#home">Home</a>
+                                <a target="_blank" href="#home">Home</a>
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
                             <li>
-                                <a href="#about">About</a>
+                                <a target="_blank" href="#about">About</a>
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
                             <li>
-                                <a href="#services">...</a>
+                                <a target="_blank" href="#services">...</a>
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
                             <li>
-                                <a href="#contact">...</a>
+                                <a target="_blank" href="#contact">...</a>
                             </li>
                         </ul-->
                     </div>
